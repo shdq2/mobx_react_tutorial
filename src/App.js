@@ -1,17 +1,14 @@
 import './App.css';
 import { inject, observer } from 'mobx-react';
-
-
+import Market from './components/market/market';
+import Cart from './components/cart/cart'
 function App({increment,decrement,total,}) {
-  console.log("asdadasd");
     return (
       <div>
-        <h1>{total.get()}</h1>
-        <button onClick={increment}>+1</button>
-        <button onClick={decrement}>-1</button>
+        <Market />
+        <Cart />
       </div>
-    );
-  
+    );  
 }
 
 export default inject(({counter}) =>({
